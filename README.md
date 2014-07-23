@@ -1,10 +1,11 @@
-jquery.template
-===============
+### Installation
+```sh
+bower install jquery.template
+```
 
-Simple jQuery templates - supports caching - multiple syntaxes
 
-
-Step 1 - Define a template.
+### Usage
+First, define a template. Ideally inside of a `<script>` tag, with the `type` attribute set to `"text/template"`.
 ```
 <script type="text/template" id="player">
   <div class="$team">
@@ -14,15 +15,16 @@ Step 1 - Define a template.
 </script>
 ```
 
-Step 2 - Pass some values.
+Second, pass `$.template` two arguments: a CSS target for your template, and an object with values.
 ```js
 var $el = $.template('#player', {
   team: 'green',
   image: 'images/player1.jpg',
   name: 'Carrrrl'
 });
-
-$el.appendTo('body');
 ```
 
-Step 3 - Enjoy
+Third, you now have a jQuery wrapped DOM element. Let's make it visible.
+```js
+$('body').append($el);
+```
