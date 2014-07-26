@@ -18,6 +18,7 @@
 
         var $html = $(html);
         for (var i in values) {
+            $html.find('.attribute-' + i).attr(i, values[i]);
             $html.find('.text-' + i).text(values[i]);
         }
 
