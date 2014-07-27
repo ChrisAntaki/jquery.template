@@ -10,13 +10,8 @@
             templates[target] = $(target).html();
         }
 
-        var html = templates[target];
-        for (var i in values) {
-            var pattern = new RegExp('\\$' + i, 'g');
-            html = html.replace(pattern, values[i]);
-        }
+        var $html = $(templates[target]);
 
-        var $html = $(html);
         for (var i in values) {
             $html.find('.attribute-' + i).attr(i, values[i]);
             $html.find('.class-' + i).addClass(values[i]);
