@@ -9,7 +9,7 @@ This library allows for templating without ever parsing your values as HTML. Thi
 
 
 ### Usage
-Passing values is easy. Just pass an object with named keys. Also, specify a CSS selector for the template as the first parameter. (Templates are cached after their first use.)
+Just pass a CSS selector for the template, and then an object with values. (Templates are cached after first use)
 ```js
 var $el = $.template('#player', {
   team: 'green',
@@ -18,7 +18,7 @@ var $el = $.template('#player', {
 });
 ```
 
-Instead of the usualy delimiters and keynames, we'll approach these templates differently. We'll be using CSS classes to target values to attributes. Let's start with this example.
+Instead of the usualy delimiters and keynames, we'll approach these templates differently. We'll be using CSS classes as directives. Let's start with this example.
 ```
 <script type="text/template" id="player">
   <div class="class-team">
