@@ -8,8 +8,8 @@ bower install jquery.template
 First, define a template. Ideally inside of a `<script>` tag, with the `type` attribute set to `"text/template"`.
 ```
 <script type="text/template" id="player">
-  <div class="$team">
-    <img src="$image">
+  <div class="class-team">
+    <img class="src-image">
     <p class="text-name"></p>
   </div>
 </script>
@@ -19,8 +19,8 @@ Second, pass `$.template` two arguments: a CSS target for your template, and an 
 ```js
 var $el = $.template('#player', {
   team: 'green',
-  image: 'images/player1.jpg',
-  name: 'Carrrrl'
+  image: 'images/green.jpg',
+  name: 'Mr. Green'
 });
 ```
 
