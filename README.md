@@ -5,7 +5,7 @@ bower install jquery.template
 
 
 ### What makes jquery.template different?
-This library allows for templating without ever parsing your values as HTML. This avoids the threat of XSS, or other value based exploits.
+When passing values to templates, we must think of how that value might affect the HTML of the template, and how that might be exploited. With `jquery.template`, you don't have to worry about that. Templates are built as shadow DOM elements, and values are inserted directly with JavaScript.
 
 
 ### Usage
@@ -31,6 +31,12 @@ Instead of the usualy delimiters and keynames, we'll approach these templates di
 We see a `<div>` with the class `class-team`. What is happening here? Well, `class-` is a directive. We add `team` after, to signify a connection with the `team` value we passed earlier. This directive will add a new class to the `<div>`, named `green`. If you're following this so far, great. The rest should be easy.  
 
 We can also see the `<img>` & `<p>` tags, both with their own directives. As you might guess, `src-` is a directive allowing for updates to the `src` attribute. That leaves `text-`, which is a directive for updating the inner text of an element. Note: this is done in such a way where HTML inside of values is not parsed, since that leads to the classic security issues.
+
+After all this, what do we get? A jQuery wrapped HTML element, ready to be given a new home. Let's be quaint, and append it to the `<body>`.
+
+```js
+$('body').append($el);
+```
 
 
 ### What directives are supported?
