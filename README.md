@@ -48,5 +48,5 @@ So far:
 
 
 ### Why not more directives?
-Please feel free to make PRs or issues!
+Please, feel free to ask for more. Just make a PR or issue in GitHub.
 
