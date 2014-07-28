@@ -1,7 +1,7 @@
 {
   "name": "jquery.template",
   "main": "jquery.template.js",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "homepage": "https://github.com/ChrisAntaki/jquery.template",
   "authors": [
     "Chris Antaki <ChrisAntaki@gmail.com>"
