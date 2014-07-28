@@ -10,7 +10,7 @@
             templates[target] = $(target).html();
         }
 
-        var $html = $(templates[target]);
+        var $html = $('<div>' + templates[target] + '</div>');
 
         for (var i in values) {
             $html.find('.attribute-' + i).attr(i, values[i]);
@@ -21,7 +21,7 @@
             $html.find('.text-' + i).text(values[i]);
         }
 
-        return $html;
+        return $html.children();
     }
 
     $.template = jQueryDotTemplate;
