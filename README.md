@@ -5,7 +5,7 @@ bower install jquery.template
 
 
 ### What makes jquery.template different?
-Everything. With most templating libraries, we have to worry about XSS vectors & attacks. With `jquery.template`, you don't have to worry about that. Templates are built as detached DOM elements, and values are assigned in a targeted manner.
+`jquery.template` takes a different approach to inserting values into templates, lessening the risk of XSS exploits.
 
 
 ### Usage
@@ -14,7 +14,7 @@ Just pass a CSS selector for the template, and then an object with values. (Temp
 var $el = $.template('#player', {
   team: 'green',
   image: 'images/green.jpg',
-  name: 'Mr. Green'
+  name: 'Gillian Green'
 });
 ```
 
