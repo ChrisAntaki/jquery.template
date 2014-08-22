@@ -28,7 +28,7 @@ Instead of the usualy delimiters and keynames, we'll approach these templates di
 </script>
 ```
 
-We see a `<div>` with the class `class-team`. What is happening here? Well, `class-` is a directive. We add `team` after, to signify a connection with the `team` value we passed earlier. This directive will add a new class to the `<div>`, named `green`. If you're following this so far, great. The rest should be easy.  
+We see a `<div>` with the class `class-team`. What is happening here? Well, `class-` is a directive. We add `team` after, to signify a connection with the `team` value we passed earlier. This directive will add a new class to the `<div>`, named `green`. If you're following this so far, great. The rest should be easy.
 
 We can also see the `<img>` & `<p>` tags, both with their own directives. As you might guess, `src-` is a directive allowing for updates to the `src` attribute. That leaves `text-`, which is a directive for updating the inner text of an element. Note: this is done in such a way where HTML inside of values is not parsed, since that leads to the classic security issues.
 
@@ -46,9 +46,6 @@ So far:
 - src- (updates src attribute)
 - target- (updates target attribute)
 - text- (updates inner text)
-
-*Bonus*
-- attribute- (updates `key` attribute to `value`)
 
 
 ### Why not more directives?
