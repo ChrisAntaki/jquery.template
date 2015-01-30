@@ -17,6 +17,7 @@
             $html.find('.href-' + i).attr('href', values[i]);
             $html.find('.src-' + i).attr('src', values[i]);
             $html.find('.target-' + i).attr('target', values[i]);
+            $html.find('.data-' + i).attr('data-' + i, values[i]);
             $html.find('.text-' + i).text(values[i]);
         }
 
